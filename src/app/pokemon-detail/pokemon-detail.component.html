@@ -1,0 +1,23 @@
+<div class="pokemon-container" *ngIf="pokemonDetails">
+ <h1>{{pokemonDetails.name | titlecase}} Details:</h1>
+ <div class="pokemon-image-container">
+ <img [src]="pokemonDetails.sprites.front_default" alt="{{pokemonDetails.name}}" class="pokemon-image"/>
+</div>
+<div class="pokemon-section">
+ <p><strong>Height: </strong>{{pokemonDetails.height}}</p>
+ <p><strong>Weight: </strong>{{pokemonDetails.weight}}</p>
+ <p><strong>BaseExperience: </strong>{{pokemonDetails.base_experience}}</p>
+ <h2>Abilities</h2>
+ <ul>
+    <li *ngFor="let ability of pokemonDetails.abilities">
+        {{ability.ability.name}}
+    </li>
+ </ul>
+ <h2>Stats</h2>
+ <ul>
+    <li *ngFor="let stat of pokemonDetails.stats">
+        <p><strong>{{stat.stat.name}}: </strong>{{stat.base_stat}}</p>
+    </li>
+ </ul>
+</div>
+</div>

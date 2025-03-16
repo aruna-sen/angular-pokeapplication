@@ -1,0 +1,26 @@
+.pokemon-image {
+    display: block;
+    margin: 0 auto;
+    transform: scale(3); 
+    transform-origin: center;
+    height: 200px;
+    width: 200px;  
+    object-fit: contain; 
+}
+
+p,ul,h2 {
+    margin-left: 10px;
+}
+
+h1 {
+    display: flex;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.pokemon-section{
+    display: block;
+   margin-top: 50px;
+   padding-top: 50px;
+}
+

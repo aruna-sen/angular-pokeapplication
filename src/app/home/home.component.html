@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Pokemon List</h1>
+    <input type="text" [(ngModel)]="searchText" (input)="applyFilter()" placeholder="Search Pokemon" class="search-box"/>
+    <div class="grid">
+        <div *ngFor="let pokemon of filteredPokemonList" class="pokemon-card">
+        <a [routerLink]="['/getPokemonDetails',pokemon.name]">
+           <img [src]="pokemon.imageUrl" crossorigin="anonymous" alt="{{pokemon.name}}" (error)="handleImageError($event)"/>
+           <h2>{{pokemon.name}}</h2>
+        </a>
+        </div> 
+    </div>
+</div>
