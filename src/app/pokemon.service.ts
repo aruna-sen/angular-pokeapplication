@@ -14,7 +14,8 @@ export interface Pokemon{
 })
 export class PokemonService {
 
-  private apiUrl='http://localhost:9090/rest/api/v1';
+  //private apiUrl='http://localhost:9090/rest/api/v1';
+  private apiUrl='http://54.194.184.84:9090/rest/api/v1';
 
   constructor(private http:HttpClient) {} 
 
