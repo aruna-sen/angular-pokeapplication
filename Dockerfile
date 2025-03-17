@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build --configuaration=production 
+RUN npm run build --configuration=production 
 
 FROM nginx:alpine AS production-stage
 
@@ -18,4 +18,4 @@ FROM nginx:alpine AS production-stage
 
 EXPOSE 80
 
-CMD ["nginx","-g","daemon off;"]
+CMD ["nginx","-g","daemon off;"] 
