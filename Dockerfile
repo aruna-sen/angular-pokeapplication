@@ -8,11 +8,11 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build --configuartion=production --output-path=/app/dist
+RUN npm run build --configuaration=production 
 
 FROM nginx:alpine AS production-stage
 
- COPY --from=build-stage /app/dist /usr/share/nginx/html/
+ COPY --from=build-stage /app/dist/pokemon-app/browser /usr/share/nginx/html/
 
  COPY nginx.conf /etc/nginx/conf.d/default.conf
 
